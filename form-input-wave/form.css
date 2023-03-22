@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ff5722;
+  color: #fff;
+  font-family: "Muli", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+/*Start SineUp & Overlay  */
+.overlay {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 50%;
+  height: 600px;
+  position: fixed;
+  top: 400px;
+  left: 768px;
+  display: none;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  border-radius: 20px;
+  transition: 1s;
+}
+.singup {
+  z-index: 500;
+  display: none;
+  position: relative;
+  top: 250px;
+}
+.singup h1 {
+  color: red;
+  margin-bottom: 70px;
+  margin-left: 20px;
+}
+.singup .cava {
+  color: #fff;
+}
+.singup input {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.singup .input {
+  width: 300px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #333;
+  font-weight: 250;
+}
+#male,
+#female {
+  margin: 15px;
+}
+.singup .singup-btn {
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  margin-left: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #999;
+  cursor: pointer;
+  transition: 0.5s;
+  color: #000;
+  font-weight: bold;
+}
+.singup .singup-btn:hover {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.5s;
+  transform: scale(1.1);
+  border: none;
+}
+.closeBtn {
+  padding: 7px;
+  text-align: center;
+  width: 30px;
+  position: relative;
+  bottom: 523px;
+  right: 390px;
+  border-radius: 3px;
+  border: none;
+  background-color: red;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.closeBtn:hover {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+/*End SineUp & Overlay  */
+
+/* Start Container */
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container a {
+  text-decoration: none;
+  color: lightblue;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: lightblue;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.text {
+  margin-top: 30px;
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
+}
+/* start responsive */
+@media screen and (max-width: 767px) {
+  .overlay {
+    top: 50%;
+    left: 50%;
+    width: 92%;
+  }
+  .closeBtn {
+    right: 50%;
+  }
+}
+/* end responsive */

@@ -1,0 +1,444 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+}
+/* start navbar */
+.main-head {
+  width: 100%;
+}
+.main-head .main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  z-index: 9999;
+}
+.main-head .main-nav {
+  border-bottom: #fff 1px solid;
+}
+.main-nav .logo {
+  margin: 10px 25px;
+}
+.main-nav .logo a {
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+}
+.main-nav .logo a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.main-nav .nav-links ul {
+  margin: 10px 25px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.main-nav .nav-links ul a {
+  position: relative;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000;
+  margin-right: 10px;
+  padding: 7px;
+}
+.nav-links a::before,
+.nav-links a::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+}
+.nav-links a::after {
+  height: 0;
+  left: 0;
+  top: 0;
+  transition: 0.6s;
+  width: 100%;
+  border-radius: 7px;
+}
+.nav-links a:hover::after {
+  /* box-shadow: inset -10.5em 0 0 0 #ff96ad, inset 10.5em 0 0 0 #ff96ad; */
+  height: 100%;
+  background-color: #ffc371;
+}
+/* end navbar */
+/* start about landing */
+.about-landing {
+  min-height: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  width: 100%;
+}
+.circle-landing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 800px;
+  background-color: #ffc371;
+  height: 500px;
+  border-radius: 0 0 50% 0;
+}
+.about-landing .intro {
+  margin-top: 150px;
+  margin-left: 50px;
+}
+.about-landing .intro h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #244d61;
+  letter-spacing: 0.5px;
+  margin-bottom: 30px;
+}
+.about-landing .intro h2 span {
+  color: #5689c0;
+}
+.about-landing .intro p {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #733635;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.about-landing .landing-image {
+  margin-top: 150px;
+}
+.about-landing .landing-image img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+/* end about landing */
+/* start team page */
+.our-team {
+  min-height: 100vh;
+  width: 100%;
+}
+.our-team .title {
+  width: 100%;
+  text-align: center;
+}
+.our-team .title h2 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.social {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.social-icons ul {
+  margin-top: 20px;
+  margin-left: 50px;
+  font-size: 100px;
+}
+.social-icons ul a {
+  font-size: 100px;
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 20px;
+  color: #fff;
+  transition: 0.7s ease-in;
+  cursor: pointer;
+}
+.social-icons ul .facebook:hover {
+  color: rgb(40, 40, 139);
+}
+.social-icons ul .whats:hover {
+  color: rgb(13, 213, 96);
+}
+.social-icons ul .tele:hover {
+  color: rgb(6, 6, 241);
+}
+.team-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 50vh;
+}
+.team-cards .team-card {
+  margin: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 30%;
+  flex-wrap: wrap;
+}
+.team-cards .team-card .image {
+  display: flex;
+  justify-content: space-between;
+}
+.team-cards .team-card .image img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  margin: 20px;
+  z-index: -1;
+}
+.team-cards .team-card .image i {
+  margin-top: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.team-cards .team-card .team-info {
+  width: 100%;
+  text-align: center;
+  transition: 1s;
+}
+.team1 {
+  display: none;
+}
+.team2 {
+  display: none;
+}
+.team3 {
+  display: none;
+}
+.team-cards .team-card .team-info h2 {
+  font-size: 25px;
+  font-weight: 600;
+  transition: 1s;
+}
+.team-cards .team-card .team-info p {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 25px;
+  transition: 1s;
+}
+.team-cards .team-card .team-info .skills {
+  text-align: center;
+  margin-top: 25px;
+  transition: 1s;
+}
+/* skills part */
+.progress {
+  position: relative;
+  width: 400px;
+  height: 30px;
+  margin: 13px;
+  background-color: #0f0538;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(#abe5e6, #7062f0);
+  transition: width 1s linear;
+  border-radius: 20px;
+}
+.social-icons ul {
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.social-icons ul a {
+  font-size: 30px;
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 20px;
+  color: #000;
+  transition: 0.7s ease-in;
+  cursor: pointer;
+}
+.social-icons ul .facebook:hover {
+  color: rgb(40, 40, 139);
+}
+.social-icons ul .insta:hover {
+  color: rgb(234, 7, 102);
+}
+.social-icons ul .github:hover {
+  color: rgb(4, 4, 120);
+}
+.social-icons ul .whats:hover {
+  color: rgb(13, 213, 96);
+}
+.social-icons ul .linked:hover {
+  color: rgb(6, 6, 241);
+}
+.visitors h2 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-align: center;
+}
+.visitors .visit {
+  text-align: center;
+  padding: 30px;
+}
+.visit h2 {
+  display: inline-block;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: #29323c;
+  margin-top: 0px;
+}
+.visit p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+/* end team page */
+/* srart footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0f0538;
+  padding: 30px;
+  width: 100%;
+  bottom: 0;
+}
+.footer .title {
+  width: 10%;
+}
+.footer .title h2 {
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+}
+.footer .title span {
+  font-size: 30px;
+  color: #7c0722;
+  font-weight: 800;
+}
+.footer .servise-links h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid #7c0722;
+}
+.footer .servise-links ul {
+  list-style: circle;
+  margin: 10px;
+}
+.footer .servise-links ul li a {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 7px;
+  transition: 0.5s;
+}
+.footer .servise-links ul li a:hover {
+  text-decoration: underline;
+  color: #007380;
+}
+.best-footer h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid #7c0722;
+}
+.best-footer ul {
+  list-style: circle;
+  margin: 10px;
+}
+.best-footer ul li a {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 7px;
+  transition: 0.5s;
+}
+.best-footer ul li a:hover {
+  text-decoration: underline;
+  color: #007380;
+}
+/* End footer */
+/* start responsive */
+@media screen and (max-width: 767px) {
+  body {
+    width: 100%;
+  }
+  .main-nav .logo a {
+    font-size: 16px;
+  }
+  .main-nav .logo a img {
+    width: 20px;
+    height: 20px;
+  }
+  .main-nav .nav-links ul {
+    margin: 10px;
+  }
+  .main-nav .nav-links ul a {
+    font-size: 12px;
+  }
+  .about-landing {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .circle-landing {
+    top: 0;
+    width: 100%;
+    min-height: 600px;
+    border-radius: 0 0 50% 50%;
+  }
+  .about-landing .landing-image {
+    width: 80%;
+    text-align: center;
+  }
+  .about-landing .intro {
+    width: 80%;
+  }
+  .about-landing .landing-image img {
+    width: 250px;
+    height: 250px;
+  }
+  .team-cards .team-card {
+    width: 100%;
+  }
+  .team-cards .team-card .image {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .team-cards .team-card .image img {
+    width: 150px;
+    height: 150px;
+  }
+  .progress {
+    width: 300px;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer .title {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  .footer .servise-links {
+    margin-bottom: 20px;
+  }
+}
+/* end responsive */

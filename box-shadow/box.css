@@ -1,0 +1,776 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  height: 230vh;
+  /* background: linear-gradient(#70e1f5, #ffd194); */
+  background-color: #eae8e8;
+}
+/* start navbar */
+.main-head {
+  width: 100%;
+}
+.main-head .main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  z-index: 9990;
+  top: 0;
+}
+.main-head .main-nav {
+  border-bottom: #fff 1px solid;
+}
+.main-nav .logo {
+  margin: 10px 25px;
+}
+.main-nav .logo a {
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 600;
+  color: #000;
+}
+.main-nav .nav-links ul {
+  margin: 10px 25px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.main-nav .nav-links ul a {
+  position: relative;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000;
+  margin-right: 10px;
+  padding: 7px;
+}
+.nav-links a::before,
+.nav-links a::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+}
+.nav-links a::after {
+  height: 0;
+  left: 0;
+  top: 0;
+  transition: 0.6s;
+  width: 100%;
+  border-radius: 7px;
+}
+.nav-links a:hover::after {
+  /* box-shadow: inset -10.5em 0 0 0 #ff96ad, inset 10.5em 0 0 0 #ff96ad; */
+  height: 100%;
+  background-color: #ffc371;
+}
+/* end navbar */
+.box-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.introduction {
+  margin-top: 100px;
+  text-align: center;
+}
+.introduction h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+/* .social-icons ul {
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.social-icons ul a {
+  font-size: 30px;
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 20px;
+  color: #000;
+  transition: 0.5s ease-in;
+}
+.social-icons ul .facebook:hover {
+  color: rgb(40, 40, 139);
+}
+.social-icons ul .insta:hover {
+  color: rgb(234, 7, 102);
+}
+.social-icons ul .github:hover {
+  color: rgb(4, 4, 120);
+}
+.social-icons ul .whats:hover {
+  color: rgb(13, 213, 96);
+}
+.social-icons ul .linked:hover {
+  color: rgb(6, 6, 241);
+} */
+.introduction p {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+.title {
+  margin-top: 80px;
+}
+.title h2 {
+  font-size: 30px;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.box-container .box-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 100px;
+  width: 100%;
+}
+.box-cards a {
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 600;
+  height: 35px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #000;
+}
+.card1 h2 {
+  font-size: 25px;
+  color: #000;
+  text-align: center;
+  margin-top: 100px;
+  display: none;
+}
+.box-cards .card1 {
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  margin: 55px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.box-cards .card2 {
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  margin: 55px;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.box-cards .card3 {
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  margin: 55px;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.box-cards .card4 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.box-cards .card5 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.box-cards .card6 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.box-cards .card7 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.box-cards .card8 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+.box-cards .card9 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.box-cards .card10 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.box-cards .card11 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.box-cards .card12 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.box-cards .card13 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.box-cards .card14 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.box-cards .card15 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.box-cards .card16 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.box-cards .card17 {
+  width: 200px;
+  margin: 55px;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.box-cards .card18 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.box-cards .card19 {
+  width: 200px;
+  margin: 55px;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.box-cards .card20 {
+  width: 200px;
+  margin: 55px;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.box-cards .card21 {
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  margin: 55px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.box-cards .card22 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.box-cards .card23 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.box-cards .card24 {
+  width: 200px;
+  margin: 55px;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.box-cards .card25 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.box-cards .card26 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.box-cards .card27 {
+  width: 200px;
+  margin: 55px;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.box-cards .card28 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.box-cards .card29 {
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  margin: 55px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.box-cards .card30 {
+  width: 200px;
+  margin: 55px;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.box-cards .card31 {
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  margin: 55px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.box-cards .card32 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.box-cards .card33 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.box-cards .card34 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.box-cards .card35 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.box-cards .card36 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+.box-cards .card37 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.box-cards .card38 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.box-cards .card39 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.box-cards .card40 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.box-cards .card41 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.box-cards .card42 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+.box-cards .card43 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.box-cards .card44 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.box-cards .card45 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.box-cards .card46 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+.box-cards .card47 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+.box-cards .card48 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.box-cards .card49 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+.box-cards .card50 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px,
+    rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
+    rgba(240, 46, 170, 0.05) 0px 25px;
+}
+.box-cards .card51 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+}
+.box-cards .card52 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+.box-cards .card53 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+.box-cards .card54 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.box-cards .card55 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
+    rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+.box-cards .card56 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+.box-cards .card57 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.box-cards .card58 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.box-cards .card59 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.box-cards .card60 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+.box-cards .card61 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px,
+    rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px,
+    rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px,
+    rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px,
+    rgb(255, 85, 85) 40px -40px;
+}
+.box-cards .card62 {
+  width: 200px;
+  height: 300px;
+  margin: 55px;
+  border-radius: 20px;
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
+    rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
+    rgb(255, 85, 85) 0px 0px 0px 15px;
+}
+/* start vistors */
+.visitors h2 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-align: center;
+}
+.visitors .visit {
+  text-align: center;
+  padding: 30px;
+}
+.visit h2 {
+  display: inline-block;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: #29323c;
+  margin-top: 0px;
+}
+.visit p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+/* end vistors */
+/* srart footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0f0538;
+  padding: 30px;
+  width: 100%;
+}
+.footer .title {
+  width: 10%;
+}
+.footer .title h2 {
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+}
+.footer .title span {
+  font-size: 30px;
+  color: #7c0722;
+  font-weight: 800;
+}
+.footer .servise-links h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid #7c0722;
+}
+.footer .servise-links ul {
+  list-style: circle;
+  margin: 10px;
+}
+.footer .servise-links ul li a {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 7px;
+  transition: 0.5s;
+}
+.footer .servise-links ul li a:hover {
+  text-decoration: underline;
+  color: #007380;
+}
+.best-footer h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid #7c0722;
+}
+.best-footer ul {
+  list-style: circle;
+  margin: 10px;
+}
+.best-footer ul li a {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 7px;
+  transition: 0.5s;
+}
+.best-footer ul li a:hover {
+  text-decoration: underline;
+  color: #007380;
+}
+/* End footer */
+/* start responsive */
+@media screen and (max-width: 767px) {
+  body {
+    width: 100%;
+  }
+  .main-nav .logo a {
+    font-size: 16px;
+  }
+  .main-nav .logo a img {
+    width: 20px;
+    height: 20px;
+  }
+  .main-nav .nav-links ul {
+    margin: 10px;
+  }
+  .main-nav .nav-links ul a {
+    font-size: 12px;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer .title {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  .footer .servise-links {
+    margin-bottom: 20px;
+  }
+}
+/* end responsive */
