@@ -548,10 +548,21 @@ body {
   .main-nav .nav-links ul a {
     font-size: 12px;
   }
+  .main-nav {
+    flex-wrap: wrap;
+    min-height: 100px;
+  }
+  .darkMood {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    margin-left: 60px;
+  }
   .main-section {
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 100px;
     min-height: 50vh;
   }
   .main-section .main-image {
