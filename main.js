@@ -63,3 +63,13 @@ function upadteVisitors() {
       contEl.innerHTML = res.value;
     });
 }
+// dark mood
+function toggleDarkMode() {
+  var style = document.getElementById("style");
+
+  if (style.getAttribute("href") == "light-mood/light.css") {
+    style.setAttribute("href", "dark-mood.css");
+  } else {
+    style.setAttribute("href", "light-mood/light.css");
+  }
+}
